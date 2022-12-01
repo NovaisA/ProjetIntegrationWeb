@@ -66,7 +66,7 @@ app.set("view engine", "ejs");
 
 //connexion BD
 mongoose.connect(
-  "mongodb+srv://projetintegration:integrationWeb@cluster0.rzx3q1e.mongodb.net/"
+  "mongodb+srv://projetintegration:integrationWeb@cluster0.rzx3q1e.mongodb.net/projetIntegration"
 );
 let db = mongoose.connection;
 db.on("error", (err) => {
