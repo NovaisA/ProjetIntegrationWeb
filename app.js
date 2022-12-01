@@ -21,7 +21,7 @@ const storage = multer.diskStorage({
 app.use(upload.any());
 
 //inserer la config de passport ici
-require("./configs/passport")(passport);
+// require("./configs/passport")(passport);
 
 app.use(expressLayouts);
 // récupérer les posts (dans les requete.body)
@@ -52,7 +52,7 @@ app.use((requete, reponse, next) => {
 });
 
 // mes routes
-app.use("/", require("./routers/WhateverWeWant"));
+app.use("/", require("./routers/index"));
 
 
 //Statique route
