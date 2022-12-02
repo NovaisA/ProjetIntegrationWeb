@@ -52,3 +52,15 @@ module.exports.modifyProduct = (query, product, callback) => {
   };
   Products.findOneAndUpdate(filter, newProduct, options, callback);
 };
+
+// API to find product by name with price asc or desc.
+module.exports.findProductByNameAscending = (filter, callback, limit) => {
+  Products.find({ desc: { $regex: filter } }, callback)
+    .limit(limit)
+    .sort({ price: 1 });
+};
+module.exports.findProductByNameDescending = (filter, callback, limit) => {
+  Products.find({ desc: { $regex: filter } }, callback)
+    .limit(limit)
+    .sort({ price: -1 });
+};
