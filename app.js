@@ -55,7 +55,6 @@ app.use((requete, reponse, next) => {
 app.use("/", require("./routers/index"));
 app.use("/users", require("./routers/users"));
 
-
 //Statique route
 app.use("/css", express.static("./styles"));
 app.use("/pictures", express.static("./static/pictures"));
