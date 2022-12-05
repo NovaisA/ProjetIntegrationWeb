@@ -1,0 +1,15 @@
+.navbar i {
+    float: left;
+    color: white;
+    margin: 6px;
+    
+  }
+  .container a:hover {
+    background-color: rgb(136, 127, 127);
+    color: black;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
